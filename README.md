@@ -1,6 +1,6 @@
 # Integer-Valued Training and Spike-Driven Inference Spiking Neural Network for High-performance and Energy-efficient Object Detection (ECCV2024)
 
-[Xinhao Luo](), [Man Yao](https://scholar.google.com/citations?user=eE4vvp0AAAAJ), [Yuhong Chou](https://scholar.google.com.hk/citations?hl=zh-CN&user=8CpWM4cAAAAJ) [Bo Xu](), [Guoqi Li](https://scholar.google.com/citations?user=qCfE--MAAAAJ&)
+[Xinhao Luo](), [Man Yao](https://scholar.google.com/citations?user=eE4vvp0AAAAJ), [Yuhong Chou](https://scholar.google.com.hk/citations?hl=zh-CN&user=8CpWM4cAAAAJ), [Bo Xu]() and [Guoqi Li](https://scholar.google.com/citations?user=qCfE--MAAAAJ&)
 
 BICLab, Institute of Automation, Chinese Academy of Sciences
 
