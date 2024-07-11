@@ -32,4 +32,3 @@ For other communications related to this git, please contact `luoxinhao2023@ia.a
 
 Our implementation is mainly based on the following codebases. We gratefully thank the authors for their wonderful works.
 
-[yolov8]([https://github.com/ultralytics/ultralytics])
