@@ -8,7 +8,7 @@ BICLab, Institute of Automation, Chinese Academy of Sciences
 
 :rocket:  :rocket:  :rocket: **News**:
 
-- **Jun. 1, 2024**: Accepted as poster in ECCV2024.
+- **July. 1, 2024**: Accepted by ECCV2024.
 
 
 TODO:
