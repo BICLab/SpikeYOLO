@@ -13,7 +13,7 @@ BICLab, Institute of Automation, Chinese Academy of Sciences
 
 TODO:
 
-- [x] Upload codes.
+- [x] Upload codes. Code will be announced after the ECCV is held in October.
 - [x] Upload checkpoints.
 
 ## Abstract
