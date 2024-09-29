@@ -9,12 +9,11 @@ BICLab, Institute of Automation, Chinese Academy of Sciences
 :rocket:  :rocket:  :rocket: **News**:
 
 - **July. 1, 2024**: Accepted by ECCV2024.
-
+- **September. 29, 2024**: Upload codes.
 
 TODO:
 
-- [x] Upload codes. Code will be announced after the ECCV is held in October.
-- [x] Upload checkpoints.
+- [x] Upload checkpoints. Checkpoint will be announced later.
 
 ## Abstract
 
