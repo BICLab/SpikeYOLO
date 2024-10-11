@@ -1,1 +1,1 @@
-python train_yolov8.py
+python train.py
