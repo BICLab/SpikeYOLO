@@ -81,7 +81,7 @@ workspace: 4  # (int) TensorRT: workspace size (GB)
 nms: False  # (bool) CoreML: add NMS
 
 # Hyperparameters ------------------------------------------------------------------------------------------------------
-lr0: 0.01 # (float) initial learning rate (i.e. SGD=1E-2, Adam=1E-3)
+lr0: 0.004 # (float) initial learning rate (i.e. SGD=1E-2, Adam=1E-3)
 lrf: 0.004  # (float) final learning rate (lr0 * lrf)
 momentum: 0.937  # (float) SGD momentum/Adam beta1
 weight_decay: 0.0005  # (float) optimizer weight decay 5e-4

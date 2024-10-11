@@ -3,8 +3,8 @@ import os
 os.environ['WANDB_DISABLED'] = 'true'
 from ultralytics import YOLO
 
-# Load a model
-
+# Load a model  COCO基准是209，voc基准是55
+model =YOLO("snn_yolov8s.yaml")
 
 print(model)
 
