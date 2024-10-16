@@ -11,11 +11,7 @@ BICLab, Institute of Automation, Chinese Academy of Sciences
 - **July. 1, 2024**: Accepted by ECCV2024.
 - **September. 28, 2024**: Upload code.
 - **October. 1, 2024**: Best Paper Candidate obtained.
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 15a7e6e20a54096ca3ac2a4a1b29c3c296ff8940
 TODO:
 
 - [x] Upload checkpoints.
