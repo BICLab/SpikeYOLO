@@ -331,7 +331,7 @@ class RepConv(nn.Module):
         return self.body(x)
 
     
-class SepRepConv(nn.Module): #放在Sepconv最后一个1*1卷积，采用3*3分组+1*1降维的方式实现，能提0.5个点。之后可以试试改成1*1降维和3*3分组
+class SepRepConv(nn.Module): 
     def __init__(
             self,
             in_channel,
@@ -343,7 +343,6 @@ class SepRepConv(nn.Module): #放在Sepconv最后一个1*1卷积，采用3*3分�
         super().__init__()
         padding = int((kernel_size-1)/2)
         # hidden_channel = in_channel
-#         conv1x1 = nn.Conv2d(in_channel, in_channel, 1, 1, 0, bias=False, groups=group)
         bn = BNAndPadLayer(pad_pixels=padding, num_features=in_channel)
         conv3x3 = nn.Sequential(
             nn.Conv2d(in_channel, out_channel, 1, 1,0, groups=group, bias=False),  #这里也是分组卷积
