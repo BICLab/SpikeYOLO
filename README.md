@@ -30,10 +30,10 @@ For help or issues using this git, please submit a GitHub issue.
 For other communications related to this git, please contact `luoxinhao2023@ia.ac.cn` and `man.yao@ia.ac.cn`.
 
 ## train
-python train_SpikeYOLO.py
+python train.py
 
 ## test / get_firing_rate
-python test_SpikeYOLO.py
+python test.py
 
 ## Thanks
 
