@@ -1,0 +1,6 @@
+torch>=1.5.0
+matplotlib
+numpy
+tqdm
+torchvision
+scipy

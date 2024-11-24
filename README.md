@@ -13,8 +13,11 @@ BICLab, Institute of Automation, Chinese Academy of Sciences
 - **October. 1, 2024**: Best Paper Candidate obtained.
 - **October. 21, 2024**: Upload checkpoints.
 
-checkpoint(23.1M, T=1, D=4):https://drive.google.com/drive/folders/1c5p09ZRCFeK1M5wH6zQduJltZalMzQkZ?usp=sharing
+checkpoint(23M, T=1, D=4):https://drive.google.com/drive/folders/1c5p09ZRCFeK1M5wH6zQduJltZalMzQkZ?usp=sharing
+checkpoint(69M, T=1, D=4):https://drive.google.com/file/d/1rmcUMJztbjFFbbVqW8xwgshKNZel1psZ/view?usp=drive_link
 
+checkpoint(23M, T=4, D=2，GEN1，基于Spikingjelly):
+https://drive.google.com/file/d/1PnrsYWSOrCjvfRpYng_hsTcv35pGsrHb/view?usp=drive_link
 
 
 ## Abstract
@@ -34,6 +37,9 @@ python train.py
 
 ## test / get_firing_rate
 python test.py
+
+## notes
+Since the Gen1 dataset involves different ways of data preprocessing, we implemented it in the folder "SpikeYOLO_for_Gen1".
 
 ## Thanks
 

@@ -9,7 +9,7 @@ model: snn_yolov8.yaml # (str, optional) path to model file, i.e. yolov8n.pt, yo
 data: VOC.yaml # (str, optional) path to data file, i.e. coco128.yaml
 epochs: 50  # (int) number of epochs to train for
 patience: 200  # (int) epochs to wait for no observable improvement for early stopping of training
-batch: 20   #(int) number of images per batch (-1 for AutoBatch) 20 bs for single GPU
+batch: 40   #(int) number of images per batch (-1 for AutoBatch) 20 bs for single GPU
 imgsz: 640  # (int | list) input images size as int for train and val modes, or list[w,h] for predict and export modes
 save: True  # (bool) save train checkpoints and predict results
 save_period: -1 # (int) Save checkpoint every x epochs (disabled if < 1)

@@ -356,6 +356,47 @@ class SepRepConv(nn.Module):
     def forward(self, x):
         return self.body(x)
 
+class SepAllConv(nn.Module):
+    r"""
+    Inverted separable convolution from MobileNetV2: https://arxiv.org/abs/1801.04381.
+    """
+
+    def __init__(self,
+                 dim,
+                 expansion_ratio=2,
+                 act2_layer=nn.Identity,
+                 bias=False,
+                 kernel_size=3,  #7,3
+                 padding=1):
+        super().__init__()
+        padding = int((kernel_size -1)/2)
+        med_channels = int(expansion_ratio * dim)
+        self.pwconv1 = nn.Conv2d(dim, med_channels, kernel_size=1, stride=1, bias=bias)
+        self.dwconv2 = nn.Conv2d(
+            med_channels, med_channels, kernel_size=kernel_size, #7*7
+            padding=padding, groups=med_channels, bias=bias)  # depthwise conv
+#         self.pwconv3 = nn.Conv2d(med_channels, dim, kernel_size=1, stride=1, bias=bias,groups=1)
+        self.pwconv3=SepRepConv(med_channels, dim)  #这里将sepconv最后一个卷积替换为重参数化卷积  大概提0.5个点，可以保留
+
+        self.bn1 = nn.BatchNorm2d(med_channels)
+        self.bn2 = nn.BatchNorm2d(med_channels)
+        self.bn3 = nn.BatchNorm2d(dim)
+
+
+        self.lif1 = mem_update()
+        self.lif2 = mem_update()
+        self.lif3 = mem_update()
+
+    def forward(self, x):
+        T, B, C, H, W = x.shape
+#         print("x.shape:",x.shape)
+        x = self.lif1(x) #x1_lif:0.2328  x2_lif:0.0493  这里x2的均值偏小，因此其经过bn和lif后也偏小，发放率比较低；而x1均值偏大，因此发放率也高
+        x = self.bn1(self.pwconv1(x.flatten(0, 1))).reshape(T, B, -1, H, W)  # flatten：从第0维开始，展开到第一维
+        x = self.lif2(x)
+        x = self.bn2(self.dwconv2(x.flatten(0, 1))).reshape(T, B, -1, H, W)
+        x = self.lif3(x)
+        x = self.bn3(self.pwconv3(x.flatten(0, 1))).reshape(T, B, -1, H, W)
+        return x
 
 class SepConv(nn.Module):
     r"""
@@ -485,7 +526,6 @@ class MS_DownSampling(nn.Module):
         super().__init__()
 
         self.encode_conv = nn.Conv2d(in_channels, embed_dims, kernel_size=kernel_size, stride=stride, padding=padding)
-
         self.encode_bn = nn.BatchNorm2d(embed_dims)
         if not first_layer:
             self.encode_lif = mem_update()
