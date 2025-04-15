@@ -17,7 +17,7 @@ checkpoint(23M, T=1, D=4):https://drive.google.com/drive/folders/1c5p09ZRCFeK1M5
 
 checkpoint(69M, T=1, D=4):https://drive.google.com/file/d/1rmcUMJztbjFFbbVqW8xwgshKNZel1psZ/view?usp=drive_link
 
-checkpoint(23M, T=2, D=4，GEN1，基于Spikingjelly):
+checkpoint(23M, T=2, D=4，GEN1，based on Spikingjelly):
 https://drive.google.com/file/d/1PnrsYWSOrCjvfRpYng_hsTcv35pGsrHb/view?usp=drive_link
 
 
